@@ -1,7 +1,7 @@
-## Welcome to Xiaobin Liu's Home Pages
+## Welcome to Shiming Chen's Home Pages
 
-I received the B.E. degree from Nankai University in 2016. I am currently a Ph.D. student of Peking University, under the supervision by Prof. Shiliang Zhang. My research interests includes image retrieval, vehicle and person re-identification, and deep hashing.
+I am currently a M.D. student of Guizhou University, under the supervision by Prof. Yisong Wang. My research interests includes image retrieval, object detection.
 
-Homepage: https://liu-xb.github.io
+Homepage: https://shiming-chen.github.io
 
-Email: xbliu.vmc@pku.edu.cn / liu-xb@qq.com
+Email: gchenshiming@gmail.com / g_shmchen@163.com
