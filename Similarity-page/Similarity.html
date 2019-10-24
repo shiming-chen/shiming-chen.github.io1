@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><TITLE>Similarity-DT: Kernel similarity embedding for Dynamic Texture Synthesis</TITLE>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+
+<META content=IE=Edge,chrome=1 http-equiv=X-UA-Compatible>
+<LINK rel=stylesheet href="css/style.css" media=screen>
+<STYLE type=text/css>
+@media Print
+{
+#STTBimg {
+    DISPLAY: none
+}
+#STTBimg2 {
+    DISPLAY: none
+}
+    }
+</STYLE>
+<style type="text/css">
+      body{background:#FFFFFF;text-align:center;}
+      div{width:970px;margin:0 auto;background:#fff;text-align:left;}
+
+      
+.STYLE2 {font-size: 18px}
+.STYLE6 {font-size: 24pt}
+.STYLE8 {color: #CC0000}
+.STYLE14 {color: #000000; font-size: 17px; font-weight: bold; }
+.STYLE15 {color: #000000}
+.STYLE16 {font-size: 22px}
+.STYLE20 {color: #FF0000; font-weight: bold; }
+.STYLE22 {color: #0000FF}
+</style>
+
+
+<META name=GENERATOR content="MSHTML 9.00.8112.16441"></head>
+<body class=" hasGoogleVoiceExt" screen_capture_injected="true">
+
+<div class="container"> 
+      <br><br>
+	  <h1 class="STYLE6" style="TEXT-ALIGN: center">Similarity-DT: Kernel similarity embedding for Dynamic Texture Synthesis</H1>
+	  <br>
+	  <span class="STYLE2"><br>
+      </span>
+	  <p style='text-align: center;'> 
+        <span style="font-size: 18px"><a class='urllink' href='https://shiming-chen.github.io/' title='' rel='nofollow'><font color="#0000FF">Shiming Chen</font></a>,
+        <a class='urllink' href='' title='' rel='nofollow'><font color="#0000FF">Peng Zhang</font></a>,
+        and <a class='urllink' href='http://bmal.hust.edu.cn/info/1005/1091.htm' title='' rel='nofollow'><font color="#0000FF">Xinge You</font></a> </span><br>
+  </p>
+      <p class='vspace STYLE2' style='text-align: center;'>
+        Huazhong University of Science and Technology (HUST), China      </p>
+
+
+      <div class=vspace> </div>
+	  <div class=line> </div>
+	  <br>
+	  
+      <h2 align="center">Abstract</h2>
+      <P align="justify">Dynamic texture exhibits statistical stationary in spatial domian and stochastic repetitiveness in temporal dimension,
+	  which is key cues for distinguishing dynamic texture videos from other videos. In this study, a simple yet effective dynamic texture synthesis method (<strong>Similarity-DT</strong>) 
+	  is proposed. Different from existing methods where a proper dimensionality-reduction function is used for conveniently solving transition function to learn 
+	  the representation of dynamic textures or deep neural networks are applied to learn a dynamic texture synthesis model, our method integrates kernel learning
+	  and extreme learning machine (ELM) into a powfully unified synthesis system to learn kernel similarity embedding for representing dynamic texture sequences. 
+	  Specifically, the method uses kernel function to replace feature mapping function of hidden layer of extreme learning machine, and thus the kernel similarity
+	  embedding is easily learned after training and high-fidelity dynamic texture sequences can be synthesized iteratively by model. The experimental results on
+	  well-known benchmark datasets showed that our proposed dynamic texture synthesis method can effectively generate realistic dynamic textures with fast speed. 
+	  We also showed that our method is capable of preserving long-term temporal continuity of the synthesized dynamic texture sequences and achieves state-of-the-art performance. </P>
+	  <div class=line> </div>
+	  <p></p>
+	   <h2>Paper </h2>
+      <P>The preprint paper can be downloaded <a class=urllink title="" href="" rel=nofollow><span class="STYLE20">here</span></a>. </P>
+	 	  
+      <div class=vspace></div>
+
+      <h2>Code and Data</h2>
+	  <div>
+	    <p>The code for all experiments can be downloaded <a class=urllink title="" href="" rel=nofollow><span class="STYLE20">here</span></a>. </p>
+	    <p>If you wish to use our code, please cite the following paper : </p>
+
+	  
+	   <div class=div-table-reference>
+        <strong>Similarity-DT: Kernel similarity embedding for Dynamic Texture Synthesis</strong><br>
+        Shiming Chen, Peng Zhang, Xinge You<br>
+        <em>Arxiv </em>2019<br>		
+      </div>	   
+  </div>
+
+      <div class=vspace></div>     
+	   
+	   <div class=line> </div>
+	  <p></p>
+	  <h2>Evaluation</h2>
+	  <p class="STYLE15">There are two different benchmark datasets used for evaluating our method: <a class=urllink title="" href="http://www.cc.gatech.edu/cpl/projects/graphcuttextures" rel=nofollow><font size="4.2" font-weight="bold" color="#0000FF">Gatech Graphcut Textures</font></a> dataset and <a class=urllink title="" href="http://projects.cwi.nl/dyntex/database.html" rel=nofollow><font size="4.2" color="#0000FF">Dyntex</font></a> dataset.
+						Some of these generated dynamic texture videos are used in paper, in which supports better vision quality. Indeed, we also evaluate our method on others DTs in-the-wild. If you are interested in the quantitative evaluation results <span class="STYLE20">(PSNR, SSIM)</span>, please take it from our paper.</p>
+	  
+	  <div class=line> </div>
+	  
+	  <h3 class="STYLE16" id="exp1">Experiment 1: Synthesize dynamic textures using various kernel fuctions</h3>
+	  <p class="STYLE15">In each example, the first one is the observed video, the others are the generated videos synthesized by <strong>Similarity-DT</strong> using different kernel function (<span class="STYLE20">left-to-right: linear kernel, rational quadratic kernel, polynomial kernel,
+						multiquadric kernel, sigmoid kernel, gaussian kernel</span>) </p>
+	  
+	  
+	  
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>Rotating wind ornament</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-parameters/645a930.gif" width="130" height="100"> <img src="Videos-gif/Different-parameters/645a930-lin-Similarity-DT.gif" width="130" height="100" > 
+				<img src="Videos-gif/Different-parameters/645a930-ratquad-Similarity-DT.gif" width="130" height="100" > <img src="Videos-gif/Different-parameters/645a930-poly-Similarity-DT.gif" width="130" height="100" >
+				<img src="Videos-gif/Different-parameters/645a930-multiquadric-Similarity-DT.gif" width="130" height="100" > <img src="Videos-gif/Different-parameters/645a930-sigmoid-Similarity-DT.gif" width="130" height="100" >
+				<img src="Videos-gif/Different-parameters/645a930-rbf-Similarity-DT.gif" width="130" height="100" >
+				</div></center>
+				
+	   </div>  
+	   </form>
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>windmill</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-parameters/6486d10.gif" width="130" height="100"> <img src="Videos-gif/Different-parameters/6486d10-lin-Similarity-DT.gif" width="130" height="100" > 
+				<img src="Videos-gif/Different-parameters/6486d10-ratquad-Similarity-DT.gif" width="130" height="100" > <img src="Videos-gif/Different-parameters/6486d10-poly-Similarity-DT.gif" width="130" height="100" >
+				<img src="Videos-gif/Different-parameters/6486d10-multiquadric-Similarity-DT.gif" width="130" height="100" > <img src="Videos-gif/Different-parameters/6486d10-sigmoid-Similarity-DT.gif" width="130" height="100" >
+				<img src="Videos-gif/Different-parameters/6486d10-rbf-Similarity-DT.gif" width="130" height="100" >
+				</div></center>   
+	   </div>  
+	   </form>
+	  
+	  
+	  
+	  <div class=line> </div>
+	  
+	  <h3 class="STYLE16">Experiment 2: Generating long-term high-fidelity dynamic textures </h3>
+	  <p class="STYLE15">In each example, the first one is the observed video, the other one is the synthesized videos by <strong>Similarity-DT</strong> with 25fps and consists of 1000 frames, i.e., 40s. 
+						Here, we display 18 dynamic texture sequences of 6 classes.</p>
+	  
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>Flowers swaying with current</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/64ad210.avi.gif" width="150" height="100"> <img src="Videos-gif/Sustainability/64ad210-Similarity-DT.gif" width="150" height="100" > </div></center>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/64ad310.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/64ad310-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/64ad410.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/64ad410-Similarity-DT.gif" width="150" height="100" >
+       </div>   
+	   </div>  
+	   </form>
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>Rotating wind ornament</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/645a820.avi.gif" width="150" height="100"> <img src="Videos-gif/Sustainability/645a820-Similarity-DT.gif" width="150" height="100" > </div></center>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/645a930.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/645a930-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/649a310.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/649a310-Similarity-DT.gif" width="150" height="100" >
+       </div>   
+	   </div>  
+	   </form>
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>Water wave</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/649i410.avi.gif" width="150" height="100"> <img src="Videos-gif/Sustainability/649i410-Similarity-DT.gif" width="150" height="100" > </div></center>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/649i510.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/649i510-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/649i720.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/649i720-Similarity-DT.gif" width="150" height="100" >
+       </div>   
+	   </div>  
+	   </form>
+	   
+	   <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>Windmill</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/6486d10.avi.gif" width="150" height="100"> <img src="Videos-gif/Sustainability/6486d10-Similarity-DT.gif" width="150" height="100" > </div></center>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/648aa10.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/648aa10-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/648ab10.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/648ab10-Similarity-DT.gif" width="150" height="100" >
+       </div>   
+	   </div>  
+	   </form>
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>Bulb</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/64ccd10.avi.gif" width="150" height="100"> <img src="Videos-gif/Sustainability/64ccd10-Similarity-DT.gif" width="150" height="100" > </div></center>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/64cce10.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/64cce10-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/64ccf10.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/64ccf10-Similarity-DT.gif" width="150" height="100" >
+       </div>   
+	   </div>  
+	   </form>
+	  
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            <h5>Elevator</h5>
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/54pc210.avi.gif" width="150" height="100"> <img src="Videos-gif/Sustainability/54pc210-Similarity-DT.gif" width="150" height="100" > </div></center>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/54pd110.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/54pd110-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/Sustainability/54pe310.avi.gif" width="150" height="100" > <img src="Videos-gif/Sustainability/54pe310-Similarity-DT.gif" width="150" height="100" >
+       </div>   
+	   </div>  
+	   </form>
+
+	  <div class=line> </div>
+	  
+	  <h3 class="STYLE16" id="exp1">Experiment 3: Vision quality comparison with state-of-the-art methods</h3>
+	  <p class="STYLE15">In each group, the first one is the observed video, the others are the generated videos synthesized by different methods 
+	  (<span class="STYLE20">left-to-right:</span> <strong>TwoStream</strong> [<font color="00FF00">4</font>], <strong>STGCN</strong> [<font color="00FF00">3</font>], <strong>DG</strong> [<font color="00FF00">2</font>],
+						ours(<strong>Similarity-DT</strong>)) </p>
+	  
+	  
+	  
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-methods/Observed/54pd210.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/CVPR2018/54pd210.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/PAMI2019/54pd210.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/AAAI2019/54pd210.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/similarity-DT/54pd210.gif" width="150" height="100"> 
+				</div></center>		
+	   </div>  
+	   </form> 
+	   
+	   <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-methods/Observed/64ad210.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/CVPR2018/64ad210.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/PAMI2019/64ad210.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/AAAI2019/64ad210.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/similarity-DT/64ad210.gif" width="150" height="100"> 
+				</div></center>		
+	   </div>  
+	   </form> 
+	   
+	   <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-methods/Observed/64ce210.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/CVPR2018/64ce210.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/PAMI2019/64ce210.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/AAAI2019/64ce210.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/similarity-DT/64ce210.gif" width="150" height="100"> 
+				</div></center>		
+	   </div>  
+	   </form>
+	 
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-methods/Observed/649i510.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/CVPR2018/649i510.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/PAMI2019/649i510.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/AAAI2019/649i510.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/similarity-DT/649i510.gif" width="150" height="100"> 
+				</div></center>		
+	   </div>  
+	   </form>
+	   
+	   <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-methods/Observed/6481o10.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/CVPR2018/6481o10.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/PAMI2019/6481o10.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/AAAI2019/6481o10.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/similarity-DT/6481o10.gif" width="150" height="100"> 
+				</div></center>		
+	   </div>  
+	   </form>
+	   
+	   <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+            
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-12" align='center'>
+                <center><img src="Videos-gif/Different-methods/Observed/6486110.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/CVPR2018/6486110.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/PAMI2019/6486110.gif" width="150" height="100"> <img src="Videos-gif/Different-methods/AAAI2019/6486110.gif" width="150" height="100"> 
+				<img src="Videos-gif/Different-methods/similarity-DT/6486110.gif" width="150" height="100"> 
+				</div></center>		
+	   </div>  
+	   </form>
+	 
+	  <div class=line> </div>
+	  
+	  <h3 class="STYLE16">Experiment 4: Generate DT videos in-the-wild </h3>
+	  <p class="STYLE15">In each example, the first one is the observed video, the other one is the synthesized videos by <strong>Similarity-DT</strong>.</p>
+	  
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/In-the-wild/cow1.gif" width="150" height="100"> <img src="Videos-gif/In-the-wild/cow1-Similarity-DT.gif" width="150" height="100" > </div></center>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/In-the-wild/cow3.gif" width="150" height="100" > <img src="Videos-gif/In-the-wild/cow3-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/In-the-wild/cow4.gif" width="150" height="100" > <img src="Videos-gif/In-the-wild/cow4-Similarity-DT.gif" width="150" height="100" >
+       </div>
+		  	   
+	   </div>  
+	   </form>
+	  
+	  <form id="exp_texture">
+	   <div class="div-table" align='center'>     
+	   <div class="headRow" align='center'>
+          <div class="div-table-col-12"><center>
+
+          </center></div>
+          			      		  
+       </div>
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/In-the-wild/cow5.gif" width="150" height="100" > <img src="Videos-gif/In-the-wild/cow5-Similarity-DT.gif" width="150" height="100" >
+       </div>
+       <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/In-the-wild/tiger1.gif" width="150" height="100" > <img src="Videos-gif/In-the-wild/tiger1-Similarity-DT.gif" width="150" height="100" >
+                </center>
+       </div> 
+	   <div class="div-table-col-3" align='center'>
+                <center><img src="Videos-gif/In-the-wild/tiger2.gif" width="150" height="100" > <img src="Videos-gif/In-the-wild/tiger2-Similarity-DT.gif" width="150" height="100" >
+       </div>   
+	   </div>  
+	   </form>
+	  
+	 
+	   
+
+	 
+	    <!--<center><img src="../../images/animation_hummingbird.gif" width=50% alt="" align="middle"></center> -->
+
+	  <div class=line> </div>
+      <!-- <div class=line-seg> </div> -->
+      <p></p>
+      <h2>Acknowledgement</h2>
+
+      <p align="justify">It will come soon.</p>
+      <div class=line> </div>
+      
+	   <p></p>
+	   <h2>Reference</h2>
+
+      <p align="justify">[1] Xinge You et al. "Energy-based Spatial-Temporal Generative ConvNet." <em>IEEE Transactions on Image Processing (TIP)</em>, 2016.</p>
+	  <p align="justify">[2] Jianwen Xie  et al. "Learning Dynamic Generator Model by Alternating Back-Propagation through Time." <em>In AAAI</em>, 2019.</p>
+      <p align="justify">[3] Jianwen Xie  et al. "Energy-based spatial-temporal generative convNet." <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</em>, 2019.</p>
+      <p align="justify">[4] Matthew Tesfaldet et al. "Two-stream convolutional networks for dynamic texture synthesis." <em>In CVPR</em>, 2018.</p>
+	  <p align="justify">[5] Gatys Leon A. et al. "Texture synthesis using convolutional neural networks." <em>In NeurIPS</em>, 2015.</p>
+	  <p align="justify">[6] Gianfranco Doretto et al. "Dynamic textures." <em>International Journal of Computer Vision (IJCV)</em>, 2003.</p>
+      <div class=line> </div>
+      <h4> <center><a class='urllink' href='./STGConvNet.html' title='' rel='nofollow'><font color="#0000FF">Top</font></a> </center></h4>
+</div>
+</body></html>
