@@ -4,7 +4,7 @@ I am currently a first-year PhD. student of Huazhong University of Science and T
 
 Homepage: https://shiming-chen.github.io
 
-Email: gchenshiming@gmail.com or g_shmchen@163.com
+Email: gchenshiming@gmail.com or shimingchen@hust.edu.cn
 
 This repository is forked and revised from https://github.com/liu-xb/liu-xb.github.io. 
 Welcome to fork my repositories if your are interested in my source codes.
